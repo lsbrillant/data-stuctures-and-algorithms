@@ -1,0 +1,13 @@
+the Code that does stuff lives in system.cpp
+
+the most interesting test is the threadtest, it tests my system in an multithreaded enviroment, wich is how i designed my system.
+
+compileing and running:
+    run make threadtest ; ./threadtest 
+
+
+submit_job is one call to std::push_heap()
+
+run_job is one call to std::push_heap()
+
+tick is worst case one call to heapsort and one to make_heap along with a transversal for both the wait_queue and the run_queue as well as iteration over at least one element of the run_queue to see if it has compleded as well as n calles to run_job(n) where n is the number of jobs started this tick
